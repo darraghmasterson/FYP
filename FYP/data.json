@@ -1,0 +1,36 @@
+"DataCollected" :{
+    "usageInformation": [
+        "How you interact\n with our services",
+        "How you communicate\n with other Snapchatters"
+    ],
+    "contentInformation": [
+        "Custom stickers",
+        "Information about content you create"
+    ],
+    "deviceInformation": [
+        "information about your hardware and software",
+        "information from device sensors",
+        "information about your wireless and mobile network"
+    ],
+    "LocationInformation": [
+        "Current location"
+    ],
+    "CookiesInformation": [
+        "activity",
+        "browser",
+        "Device"
+    ],
+    "LogInformation": [
+        "how you've used services",
+        "Device information",
+        "Access time",
+        "IP address",
+        "Pages viewed",
+        "Identifiers associated with cookies",
+    ],
+    "ThirdPartyInformation": [
+        "If you link account to another service",
+        "Information from advertisers",
+        "If you appear in another user's contacts"
+    ]
+}

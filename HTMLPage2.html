@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+    <style type="text/css">
+        #mynetwork {
+            autoResize: true;
+            width: 600px;
+            height: 500px;
+            border: 1px solid lightgray;
+            align-content: right;
+        }
+
+        
+        .button-group button {
+            background-color: #4CAF50; /* Green background */
+            border: 1px solid green; /* Green border */
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            width: 100%; /* Set a width if needed */
+            display: block; /* Make the buttons appear below each other */
+            margin-bottom: 10px;
+        }
+
+            
+
+            /* Add a background color on hover */
+            .button-group button:hover {
+                background-color: #3e8e41;
+            }
+            .container {
+             width: 100%;
+              
+              
+              margin: auto;
+              padding: 10px;
+            }
+
+            .button-group {
+              
+              
+              margin-top:200px;
+              
+              float: left;
+            }
+
+            .two {
+              margin-left: 150px;
+              
+            }
+            </style>
+        </head>
+        <body>
+
+            <section class="container">
+                <div class="button-group">
+                    <button type="button" onclick="changeToTP()">Third Parties</button>
+                    <button type="button" onclick="location.reload()">Data Collected</button>
+                    <button type="button" onclick="purposes()" title="What your data is used for">Purposes</button>
+                    <button type="button" onclick="processing()" title="How your data is stored, deleted and shared">Processing</button>
+                    <button type="button" onclick="consent()" title="How your data is stored, deleted and shared">Consent</button>
+                </div>
+
+                <div class="two "id="mynetwork"></div>
+
+            </section>
+            <script src="FYP/Script1.js">
+
+
+            </script>
+    
+</body>
+</html>
