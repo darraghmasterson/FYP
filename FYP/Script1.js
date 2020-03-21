@@ -54,6 +54,28 @@
 									   ]
                                     }
                         }
+        var Deletion = { "Deletion":{
+                                        "HowToDeleteAccount":[
+                                        "Go to http://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdelete_account",
+                                        "Account will be deactivated for 30 days",
+                                        "After 30 days will be permanently deleted"
+                                        
+										],
+                                        "RequestToDelete":[
+                                        "basic account information¡ªlike your name, phone number, and email address",
+                                        "list of friends"
+                                        
+										],
+                                        "DeleteInTheApp": [
+                                         "photos you¡¯ve saved to Memories",
+                                          "Our Story submissions",
+                                          "Search history"
+                                        
+										]
+        
+		}
+                        
+		}
         var Purposes = { "Purposes":{
                                         "ResearchAndDevelopment":[
                                         "develop, operate, improve, deliver, maintain, and protect our products and services.",
@@ -110,7 +132,7 @@
                                         
 										],
                                         "Deletion": [
-                                        "if for some reason you ever want to delete your\n account, just go here to learn how",
+                                        "if for some reason you ever want to delete your\n account, just go here to learn how https://support.snapchat.com/a/delete-my-account1",
                                         "You can also delete some information in the app,\n like photos you've saved to Memories,\n Our Story submissions, and search history.",
                                         "There may be legal requirements to store your data\n and we may need to suspend those deletion practices"
 										],
@@ -138,6 +160,13 @@
 
         
 		}}
+
+        function deletion(){
+            var array = ["HowToDeleteAccount", "RequestToDelete","DeleteInTheApp"];
+            var string = "Deletion.Deletion";
+            var name = "Deletion";
+            change(network, array, string, name);
+		}
 
         function consent() {
             var array = ["HowToWithdraw", "RightToObject"];
