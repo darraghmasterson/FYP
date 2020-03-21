@@ -44,7 +44,7 @@
                                        "Information from advertisers",
                                        "If you appear in another user's contacts"
                                        ],
-                                       "InformationWeGive": [
+                                       "InformationWeShare": [
                                         "Information collected by business partners who \n provide services on our services",
                                         "Device and usage information",
                                         "When needed to comply with valid legal process",
@@ -56,18 +56,18 @@
                         }
         var Deletion = { "Deletion":{
                                         "HowToDeleteAccount":[
-                                        "Go to http://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdelete_account",
+                                        "Go to and enter details \nhttp://accounts.snapchat.com/accounts/login?continue\n=https%3A%2F%2Faccounts.snapchat\n.com%2Faccounts%2Fdelete_account ",
                                         "Account will be deactivated for 30 days",
                                         "After 30 days will be permanently deleted"
                                         
 										],
                                         "RequestToDelete":[
-                                        "basic account information¡ªlike your name, phone number, and email address",
+                                        "basic account information like your name, phone number, and email address",
                                         "list of friends"
                                         
 										],
                                         "DeleteInTheApp": [
-                                         "photos you¡¯ve saved to Memories",
+                                         "photos you've saved to Memories",
                                           "Our Story submissions",
                                           "Search history"
                                         
@@ -78,17 +78,17 @@
 		}
         var Purposes = { "Purposes":{
                                         "ResearchAndDevelopment":[
-                                        "develop, operate, improve, deliver, maintain, and protect our products and services.",
+                                        "develop, operate, improve, deliver,\n maintain, and protect our products and services.",
                                         "monitor and analyze trends and usage.",
-                                        "use information we've collected from cookies and other technology to enhance our services and your experience with them."
+                                        "use information we've collected from cookies and other\n technology to enhance our services and your experience with them."
                                         ],
                                         "Security":[
                                         "enhance the safety and security of our products and services.",
-                                        "verify your identity and prevent fraud or other unauthorized or illegal activity.",
+                                        "verify your identity and prevent fraud\n or other unauthorized or illegal activity.",
 
 										],
                                         "CommercialInterest": [
-                                        "provide and improve our advertising services, ad targeting, and ad measurement",
+                                        "provide and improve our advertising \nservices, ad targeting, and ad measurement",
                                         "customizing the content we show you, including ads."
 
                                                   
@@ -97,7 +97,7 @@
                                         "contextualize your experience by,\n among other things, tagging your Memories\n content using your precise location information",
                                         "send you communications, including by email",
                                         "use information we've collected from cookies and other technology to enhance our services",
-                                        "personalize our services by, among other things, suggesting friends, profile information, or Bitmoji stickers"
+                                        "personalize our services by, among other things,\n suggesting friends, profile information, or Bitmoji stickers"
 										]
 
 
@@ -124,7 +124,7 @@
 
         var Processing = {"Processing":{
                                         "Storage": [
-                                        "For detailed information about how long we store\n different types of content, check out our Support Site.",
+                                        "For detailed information about how long we store\n different types of content, check out our Support Site. \n https://support.snapchat.com/article/integrated-features",
                                         "We store your basic account information\n until you ask us to delete them.",
                                         "if you use the Map, we store information\n about your favorite places for up to 40 days",
                                         "If location information is associated with\n a Snap we'll retain that location as long as we store the Snap."
@@ -150,10 +150,10 @@
                                         "any content that you submit to an inherently public service,\n like Our Story and other crowd-sourced services"
                                         ],
                                         "SharedWithThirdParties": [
-                                        "We may share information about you with business partners that provide services",
-                                        "We may share information about you, such as device and usage\n information, to help us and others prevent fraud.",
-                                        "We may share information about you for legal, safety, and security reasons",
-                                        "We may share information about you as part of a merger or acquisition."
+                                        "information with business partners that provide services",
+                                        "information such as device and usage\n information, to help us and others prevent fraud.",
+                                        "information about you for legal, safety, and security reasons",
+                                        "information about you as part of a merger or acquisition."
                                         
 										]
 
@@ -163,7 +163,7 @@
 
         function deletion(){
             var array = ["HowToDeleteAccount", "RequestToDelete","DeleteInTheApp"];
-            var string = "Deletion.Deletion";
+            var string = "Deletion.Deletion.";
             var name = "Deletion";
             change(network, array, string, name);
 		}
@@ -199,7 +199,7 @@
         function changeToTP()
         {
             var TP = ["InformationWeCollect",
-                      "InformationWeGive"]
+                      "InformationWeShare"]
             var string = "ThirdParties.ThirdParties.";
             var name = "Third Parties"
             change(network, TP, string, name);
@@ -230,7 +230,7 @@
             count++;
             var y = string + array[i] + ".length" ;
             string +=  array[i];
-            
+            console.log(y);
             for (x = 0; x < eval(y); x++)
                 {
                     console.log(x);
@@ -337,7 +337,7 @@
         {
             //spacing between words in strings
             var str = dataCollected[i].split(/(?=[A-Z])/).join(" ");
-            console.log(str);
+            
 
             nodes.push({id : count, label: str, fixed : true, cid: count, level: 2});
             edges.push({from: 1, to: count, arrows: {
@@ -497,7 +497,10 @@
         });
 
         network.on("selectNode", function(params) {
-        console.log(network.getPositions(2));
+
+        
+
+        
         
   if (params.nodes.length == 1) {
         console.log(params);
@@ -573,6 +576,16 @@
         }
    
          else if(network.isCluster(params.nodes[0]) == false){
+         
+
+                    console.log(params);
+                    console.log(nodes[params.nodes -1].label);
+
+                    var matches = nodes[params.nodes -1].label.match(/\bhttps?:\/\/\S+/gi);
+                    console.log(matches);
+                    if(matches != null) window.open(matches[0]);
+                    
+
 
                     var int = params.nodes[0] -1;
                     console.log(int);
