@@ -1,55 +1,71 @@
 
         
         var json = { "DataCollected" :{
-                                        "usageInformation": [
-                                            "Information about your type\n of Spotify Service plan.",
-                                            "Information about your interactions \nwith the Spotify Service",
-                                            "Inferences drawn about your interests\n and preferences based \non your usage of the Spotify Service.",
-                                            "User Content you post to Spotify,\n such as photos, playlist title\ns and interactions with the\n Spotify Customer Service Team",
-                                            "URL information",
-                                            "motion-generated or orientation-generated\n mobile sensor data"
+                                        "UsageInformation": [
+                                        "access dates and times",
+                                        "app features or pages viewed",
+                                        "app crashes and other system activity",
+                                        "type of browser",
+                                        "third-party sites or services used before interacting with our services"
+                                            
+                                            
                                         ],
-                                        "contentInformation": [
-                                            "Custom stickers",
-                                            "Information about content you create"
+                                        "ContentInformation": [
+                                        "Profile picture",
+                                        "Vehicle make, model and vehicle photo",
+
+                                         
                                         ],
-                                        "deviceInformation": [
-                                            "Types of devices you are\n using such as unique device IDs,\n network connection type",
-                                            "provider",
-                                            "network and device performance",
-                                            "browser type",
-                                            "language",
-                                            "information enabling digital rights management",
-                                            "operating system", 
-                                            "Spotify application version",
-                                            "device attributes of devices on\n your wifi network that are \navailable to connect to the Spotify Service"
+                                        "DeviceInformation": [
+                                            "hardware models",
+                                            "device IP address",
+                                            "operating systems and versions",
+                                            "software",
+                                            "preferred languages",
+                                            "unique device identifiers",
+                                            "advertising identifiers",
+                                            "serial numbers",
+                                            "device motion data",
+                                            "mobile network data."
+                                            
                                         ],
                                         "LocationInformation": [
-                                            "your non-precise location, \nwhich may be derived or inferred \nfrom certain technical data"
+                                           "Approximate location if enabled by the user",
+                                           "pickup and/or dropoff locations",
+
                                         ],
                                         "CookiesInformation": [
-                                            "online identifiers including\n cookie data and IP addresses",
+                                           " In some cases, we collect this data through\n cookies, pixels, tags, and similar tracking technologies",
+
                                         ],
                                         "LogInformation": [
-                                            "how you've used services",
-                                            "Device information",
-                                            "Access time",
-                                            "IP address",
-                                            "Pages viewed",
-                                            "Identifiers associated with cookies",
+                                        "trips",
+                                        "length of use of the Uber app",
+
+                                        
+                                           
                                         ],
                                         "ThirdPartyInformation": [
-                                            "If you link account to another service",
-                                            "Information from advertisers",
-                                            "If you appear in another user's contacts"
+                                        "demographic data from third parties",
+
+                                           
                                         ],
-                                        "PaymentInformation": [
-                                            "Name",
-                                            "Date of birth",
-                                            "Credit or debit card type, expiration\n date, and certain digits of your card number",
-                                            "Postal code",
-                                            "Mobile phone number", 
-                                            "Details of your purchase and payment history."
+                                        "TransactionInformation": [
+                                                "Type of services requested or provided",
+                                                "Order details",
+                                                "Delivery information",
+                                                "Date and time",
+                                                "amount charged",
+                                                "distance traveled",
+                                                "payment method"
+										],
+                                        "UserProvidedInformation": [
+                                            "name ",
+                                            "email",
+                                            "Phone number",
+                                            "Address",
+                                            "Profile picture",
+                                            "Payment information",
 
 										]
                                     }
@@ -57,41 +73,53 @@
         
         var ThirdParties =  { "ThirdParties" :{
                                        "InformationWeCollect": [
-                                       "Link account to another service",
-                                       "Information from advertisers",
-                                       "If you appear in another user's contacts"
+                                       "we may receive demographic data about users from third parties."
                                        ],
                                        "InformationWeShare": [
-                                        "Information collected by \nbusiness partners who \n provide services on our services",
-                                        "Device and usage information",
-                                        "When needed to comply with valid legal process",
-                                        "To investigate potential Terms of Service violations",
-                                        "To protect the rights,\n property or safety of others",
-                                        "As part of merger or aquistion"
+                                        " if a user requests a service through a partnership or\n promotional offering made by a third party, \nUber may share certain data with those third parties",
+                                        "Uber does not sell or share user personal data with third parties for their direct marketing"
 									   ]
                                     }
                         }
+        var Deletion = { "Deletion":{
+                                        "HowToDeleteAccount":[
+                                        "Riders and delivery recipients can through\n the Settings > Privacy menus in the Uber app",
+                                        "Riders and delivery recipients can go to\n https://help.uber.com/h/24010fe7-7a67-4ee5-9938-c734000b144a",
+                                        "Drivers and delivery partners can go to\n https://help.uber.com/h/55ae2bb5-b102-4ab0-9ed3-32f4db95f0e5"
+
+
+                                        
+										],
+                                        "CantDeleteWhen":[
+                                        "Uber keeps data that might be used for \nthe purposes of regulatory, tax, \ninsurance, litigation, or other legal requirements",
+                                        "When there's an outstanding\n credit on the account",
+                                        "the account is infvoled in\n an unresolved claim or dispute"
+                                        
+                                        
+										]
+                                       
+        
+		}
+                        
+		}
         var Purposes = { "Purposes":{
                                         "ResearchAndDevelopment":[
-                                        "develop, operate, improve, deliver, \nmaintain, and protect our products and services.",
-                                        "monitor and analyze trends and usage.",
-                                        "use information we've collected\n from cookies and other technology \nto enhance our services and your \nexperience with them."
+                                        "to improve and enhance the safety\n and security of our services",
+                                        "improve our ability to prevent the\n use of our services for illegal or improper purposes",
+                                        " develop new features and products",
+                                        "facilitate insurance and finance\n solutions in connection with our services"
+
+                                            
                                         ],
                                         "Security":[
-                                        "enhance the safety and security\n of our products and services.",
-                                        "verify your identity and \nprevent fraud or other \nunauthorized or illegal activity.",
-
+                                        "Screening riders, drivers,\n and delivery partners",
+                                        " to help identify unsafe\n driving behavior",
+                                        "To identify driver",
+                                        "to prevent, detect, and combat\n fraud or unsafe activities"
 										],
                                         "CommercialInterest": [
-                                        "provide and improve our advertising\n services, ad targeting, and ad measurement",
-                                        "customizing the content we\n show you, including ads."
-
-                                                  
-										],
-                                        "ServiceOptimisation":[
-                                        "To provide and personalize the Spotify Service.",
-                                        "To understand, diagnose, troubleshoot\n, and fix issues with the Spotify Service.",
-                                        "To evaluate and develop new\n features, technologies, and \nimprovements to the Spotify Service.",
+                                        "Uber may use the data we collect to\n market our services to our users",
+                                        "We may use the data we collect to\n personalize the marketing communications",
 
 										]
 
@@ -106,12 +134,11 @@
 
         var Consent = { "Consent":{
                                     "HowToWithdraw": [
-                                    "Through device permissions"
+                                        "Through in-app settings and device permissions"
                                     
 									],
                                     "RightToObject": [
-                                    "Ability to delete data",
-                                    "Abililty to disable feature altogether"
+                                        "Riders, delivery recipients, and renters may use\n the Uber apps without enabling Uber\n to collect location data from their mobile devices"
 									]
                                     }
         
@@ -119,55 +146,50 @@
 
         var Processing = {"Processing":{
                                         "Storage": [
-                                        "We keep your personal data only as\n long as necessary \nto provide you with the Spotify Service",
-                                        "We keep some of your personal \ndata for as long as you are a user of the \nSpotify Service. For example, we keep your \nplaylists, song library, and account information"
+                                        "Uber retains user profile, transaction,\n and other information for as long \nas a user maintains their Uber account.",
+
                                         
 										],
                                         "Deletion": [
-                                        "If you request, we will\n delete or anonymise your personal \ndata so that it no longer identifies you",
-                                        "If we learn that we have collected the\n personal data of a child under the age \nof 13 years, we will take reasonable \nsteps to delete the personal data.",
+                                        "Riders and delivery recipients may \nrequest deletion of their account\n through the Settings > Privacy menus in the Uber app",
+                                        "Riders and delivery recipients may request\n deletion of their account through Uber's Help Center.",
+                                        "Following such requests, Uber deletes the \ndata that it is not required to retain"
                                         
 										],
                                       
-                                        "SharedWithFollowers": [
-                                        "Public playlists",
-                                        "Private playlists"
+                                        "SharedWithOtherUsers": [
+                                        "Riders' first name, rating, and pickup\n and/or dropoff locations with drivers.",
+                                        "Riders' first name with other\n riders in a carpool trip.",
+
+                                        "Riders who have enabled Uber to collect\n location data from their mobile device \nmay also enable Uber to \nshare their location with their driver",
+                                        "Delivery recipients' first name, \ndelivery address, and order information",
+
+                                        
                                         
 										],
-                                        "SharedWithArtists": [
-                                        "You may choose to share personal data",
-                                        "With artists, record labels, or other\n partners who may want to directly \nsend you news or promotional offers."
-                                        ],
+                                        "SharedByDrivers": [
+                                        "name and photo",
+                                        "vehicle make, model, color, \nlicense plate, and vehicle photo",
+                                        "location (before and during trip)",
+                                        "average rating provided by users",
+                                        "total number of trips",
+                                        "length of use of the Uber app",
+                                        "contact information \n(depending upon applicable laws)",
+                                        "driver or delivery partner \nprofile, including compliments and \nother feedback submitted by past users"
+                                       
+                                       ],
                                         "SharedWithThirdParties": [
-                                        "If you connect your Spotify account\n to a third party application, \nSpotify shares technical data with \nthe operator of that third party application",
-                                        "We will share your personal data wit\nh our payment processors as necessary",
-                                        "We and our advertising partners may process\n certain personal data to help \nSpotify understand your interests or preferences",
-                                        "We will share your personal data for activities\n such as statistical analysis and \nacademic study but only in a pseudonymised format.",
-                                        "We will share your personal data with\n other Spotify group companies to carry \nout our daily business operations",
-                                        "when we in good faith believe it is necessary\n for us to do so in order to \ncomply with a legal obligation",
-                                        "in those cases where we sell or\n negotiate to sell our business to \na buyer or prospective buyer."
-										]
-                                        }
-        }
+                                        "Uber may also share data \nwith law enforcement regarding \ncriminal acts or threats to public safety",
 
-         var Deletion = { "Deletion":{
-                                        "HowToDeleteAccount":[
-                                        "To close your account permanently, you can visit our contact form and pick Account. \n https://support.spotify.com/contact-spotify-support"
                                         
-										],
-                                        "CantDelete":[
-                                        "If there is an unresolved issue relating to your account such as outstanding credit",
-                                        "Where we need to retain the personal data for our legal, tax, audit, and accounting obligations",
-                                        "Where necessary for our legitimate business \ninterests such as fraud prevention or to maintain the security of our users."
-
 										]
-                              
-        
-		    }
-        }
 
-        function deletion() {
-            var array = ["HowToDeleteAccount", "CantDelete"];
+
+        
+		}}
+
+        function deletion(){
+            var array = ["HowToDeleteAccount", "CantDeleteWhen"];
             var string = "Deletion.Deletion.";
             var name = "Deletion";
             change(network, array, string, name);
@@ -181,7 +203,7 @@
 		}
 
         function processing() {
-            var array = ["Storage", "Deletion", "SharedWithFollowers", "SharedWithArtists", "SharedWithThirdParties"];
+            var array = ["Storage", "Deletion", "SharedWithOtherUsers", "SharedByDrivers", "SharedWithThirdParties"];
             var string = "Processing.Processing."
             var name = "Processing";
             change(network, array, string, name);
@@ -192,7 +214,7 @@
             var array = ["ResearchAndDevelopment",
                                     "Security",
                                     "CommercialInterest",
-                                    "ServiceOptimisation"
+                                    
 
             
 			]  
@@ -204,7 +226,7 @@
         function changeToTP()
         {
             var TP = ["InformationWeCollect",
-                      "InformationWeShare"];
+                      "InformationWeShare"]
             var string = "ThirdParties.ThirdParties.";
             var name = "Third Parties"
             change(network, TP, string, name);
@@ -235,7 +257,7 @@
             count++;
             var y = string + array[i] + ".length" ;
             string +=  array[i];
-            
+            console.log(y);
             for (x = 0; x < eval(y); x++)
                 {
                     console.log(x);
@@ -319,13 +341,15 @@
 		}
 
         // create an array with nodes
-        var dataCollected = ["usageInformation",
-                            "contentInformation",
-                            "deviceInformation",
+        var dataCollected = ["UsageInformation",
+                            "ContentInformation",
+                            "DeviceInformation",
                             "LocationInformation",
                             "CookiesInformation",
                             "LogInformation",
-                            "ThirdPartyInformation"]
+                            "ThirdPartyInformation",
+                            "TransactionInformation",
+                            "UserProvidedInformation"]
         console.log(dataCollected.length);
         var nodes = [];
         nodes.push({id : 1, label :"Data Collected", fixed: true, level: 1});
@@ -342,7 +366,7 @@
         {
             //spacing between words in strings
             var str = dataCollected[i].split(/(?=[A-Z])/).join(" ");
-            console.log(str);
+            
 
             nodes.push({id : count, label: str, fixed : true, cid: count, level: 2});
             edges.push({from: 1, to: count, arrows: {
@@ -502,7 +526,10 @@
         });
 
         network.on("selectNode", function(params) {
-        console.log(network.getPositions(2));
+
+        
+
+        
         
   if (params.nodes.length == 1) {
         console.log(params);
@@ -578,12 +605,18 @@
         }
    
          else if(network.isCluster(params.nodes[0]) == false){
+         
 
-                  var matches = nodes[params.nodes -1].label.match(/\bhttps?:\/\/\S+/gi);
+                    console.log(params);
+                    console.log(nodes[params.nodes -1].label);
+
+                    var matches = nodes[params.nodes -1].label.match(/\bhttps?:\/\/\S+/gi);
                     console.log(matches);
                     if(matches != null) window.open(matches[0]);
+                    
 
-                  var int = params.nodes[0] -1;
+
+                    var int = params.nodes[0] -1;
                     console.log(int);
 
                     var label = nodes[int].label;
