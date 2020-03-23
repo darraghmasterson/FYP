@@ -57,7 +57,8 @@
                                                 "Date and time",
                                                 "amount charged",
                                                 "distance traveled",
-                                                "payment method"
+                                                "payment method",
+                                                "Promotion code referral information"
 										],
                                         "UserProvidedInformation": [
                                             "name ",
