@@ -166,6 +166,8 @@
 		    }
         }
 
+
+
         function deletion() {
             var array = ["HowToDeleteAccount", "CantDelete"];
             var string = "Deletion.Deletion.";
@@ -318,17 +320,21 @@
               //  network.moveTo(options);
 		}
 
-        // create an array with nodes
-        var dataCollected = ["usageInformation",
+        function dataCollected(){
+         var array = ["usageInformation",
                             "contentInformation",
                             "deviceInformation",
                             "LocationInformation",
                             "CookiesInformation",
                             "LogInformation",
                             "ThirdPartyInformation"]
-        console.log(dataCollected.length);
+          var string = "json.DataCollected.";
+          var name = "Data Collected";
+          change(network, array, string, name);
+		}
+
         var nodes = [];
-        nodes.push({id : 1, label :"Data Collected", fixed: true, level: 1});
+        nodes.push({id : 1, label :"Select a category on the left to begin", fixed: true, level: 1});
 
 
 
@@ -338,34 +344,10 @@
         var parent = 0;
         var x = 0;
 
-        for(i = 0; i < dataCollected.length; i++)
-        {
-            //spacing between words in strings
-            var str = dataCollected[i].split(/(?=[A-Z])/).join(" ");
-            console.log(str);
+     
 
-            nodes.push({id : count, label: str, fixed : true, cid: count, level: 2});
-            edges.push({from: 1, to: count, arrows: {
-                                to: {
-                                    enabled: true,
-                                    type: 'arrow'}}});
-            parent = count;
-            count++;
-            var string = "json.DataCollected." + dataCollected[i];
-            var y = "json.DataCollected." + dataCollected[i] + ".length" ;
-            for (x = 0; x < eval(y); x++)
-                {
-                    console.log(x);
-                    nodes.push({id : count, label: eval(string)[x], fixed: true, cid: parent, level: 3});
-                    edges.push({from: parent, to: count, arrows: {
-                                to: {
-                                    enabled: true,
-                                    type: 'arrow'}}});
-                    count++;
-                    
-                }
-
-        }
+         
+           
 
        
 
@@ -404,12 +386,7 @@
           keyboard: true
         },
         nodes:{
-      //  size: 1000,
-        fixed: true,
-         color: {
-        border: '#4c595c',
-         background: '#c2dfff'
-        }
+        shape:"text"
         },
         edges:{
         smooth:true
@@ -428,21 +405,8 @@
         network = new vis.Network(container, data, options);
         network.setData(data);
         var cid;
-        cluster(dataCollected, nodes, network);
+      //  cluster(dataCollected, nodes, network);
         setListeners(network);
-        var options = {
-                                position: {x:0 ,y:0},
-                                animation: true,
-                                scale: .6
-                
-                            }
-                            
-           //     network.moveTo(options);
-        
-        //iterate through all data headings
-
-        // changeTP(network);
-        
       
         network.on("hoverNode", function(){
        //   console.log("hover");
