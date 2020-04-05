@@ -146,6 +146,10 @@
                                         "We will share your personal data with\n other Spotify group companies to carry \nout our daily business operations",
                                         "when we in good faith believe it is necessary\n for us to do so in order to \ncomply with a legal obligation",
                                         "in those cases where we sell or\n negotiate to sell our business to \na buyer or prospective buyer."
+										],
+                                        "AccessAndCorrection":[
+                                            "'Download my data' button on Privacy Settings page",
+
 										]
                                         }
         }
@@ -166,6 +170,28 @@
 		    }
         }
 
+        var Storage = { "Storage":{
+                                    "StoredForAsLongAsNecessary":[
+                                    "Personal data"
+
+									],
+                                    "StoredAsLomgAsYouUseService":[
+                                    "Playlists",
+                                    "Song library",
+                                    "Account information"
+                                    
+									]
+        
+		}
+        }
+
+        function storage(){
+            var array =   ["StoredForAsLongAsNecessary",
+                            "StoredAsLomgAsYouUseService"]
+            var string = "Storage.Storage.";
+            var name = "Storage";
+            change(network, array, string, name);
+		}
 
 
         function deletion() {
@@ -183,7 +209,7 @@
 		}
 
         function processing() {
-            var array = ["Storage", "Deletion", "SharedWithFollowers", "SharedWithArtists", "SharedWithThirdParties"];
+            var array = ["Storage", "Deletion", "SharedWithFollowers", "SharedWithArtists", "SharedWithThirdParties", "AccessAndCorrection"];
             var string = "Processing.Processing."
             var name = "Processing";
             change(network, array, string, name);

@@ -38,7 +38,7 @@
         }
 
         .button-group {
-            margin-top: 200px;
+            margin-top: 125px;
             float: left;
         }
 
@@ -48,12 +48,17 @@
     </style>
 </head>
 <body>
-
+    <div>
+        Click on a cluster (the squares) to open,
+        click on the parent node to close the cluster</br>
+        Use green buttons to change category, hover over buttons for more information
+    </div>
     <section class="container">
         <div class="button-group">
             <button type="button" onclick="changeToTP()">Third Parties</button>
             <button type="button" onclick="dataCollected()">Data Collected</button>
             <button type="button" onclick="purposes()" title="What your data is used for">Purposes</button>
+            <button type="button" onclick="storage()" title="How long data is stored for">Storage</button>
 
             <button type="button" onclick="deletion()" title="How to delete data">Deletion</button>
             <button type="button" onclick="processing()" title="How your data is stored, deleted and shared">Processing</button>

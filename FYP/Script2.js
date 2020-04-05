@@ -156,11 +156,46 @@
                                         "information about you for legal, safety, and security reasons",
                                         "information about you as part of a merger or acquisition."
                                         
+										],
+                                        "AccessAndCorrection": [
+                                            "Most data viewable and editable within app",
+                                            "All data can be downloaded from \n https://accounts.snapchat.com/accounts/downloadmydata",
+
 										]
+
 
 
         
 		}}
+
+        var Storage = {"Storage": {
+                                    "StoredForFortyDays": [
+                                        "Map information",
+                                        "Your favourite places"
+                                    
+									],
+                                    "StoredIndefinitely":[
+                                    "Snaps in memories",
+                                    "Location associated with a Snap",
+
+                                    
+									],
+                                    "StoredUntilRequested":[
+                                    "Basic account information",
+                                    
+									]
+
+        
+		}}
+
+        function storage(){
+            var array =   ["StoredForFortyDays",
+                            "StoredIndefinitely",
+                             "StoredUntilRequested"]
+            var string = "Storage.Storage.";
+            var name = "Storage";
+            change(network, array, string, name);
+		}
 
         function dataCollected(){
          var array = ["usageInformation",
@@ -190,7 +225,7 @@
 		}
 
         function processing() {
-            var array = ["Storage", "Deletion", "SharedWithOtherSnapchatters", "SharedWithAllSnapchatters", "SharedWithThirdParties"];
+            var array = ["Storage", "Deletion", "SharedWithOtherSnapchatters", "SharedWithAllSnapchatters", "SharedWithThirdParties", "AccessAndCorrection"];
             var string = "Processing.Processing."
             var name = "Processing";
             change(network, array, string, name);

@@ -183,11 +183,34 @@
                                         "Uber may also share data \nwith law enforcement regarding \ncriminal acts or threats to public safety",
 
                                         
-										]
-
+										],
+                                        "HowToViewInfomationStoredOnYou": [
+                                        "In-app settings",
+                                        "Device permissions",
+                                        "In-app ratings pages",
+                                        "Marketing opt-outs",
+                                        "User can request access to copies of their data"
+                                        ]
 
         
 		}}
+
+        var Storage = {"Storage":{
+                                    "UntilUserDeletesAccount":[
+                                        "user profile",
+                                        "transaction data",
+                                        "other information"
+									]  
+		}
+        
+		}
+
+         function storage(){
+            var array =   ["UntilUserDeletesAccount"]
+            var string = "Storage.Storage.";
+            var name = "Storage";
+            change(network, array, string, name);
+		}
 
         function deletion(){
             var array = ["HowToDeleteAccount", "CantDeleteWhen"];
@@ -204,7 +227,7 @@
 		}
 
         function processing() {
-            var array = ["Storage", "Deletion", "SharedWithOtherUsers", "SharedByDrivers", "SharedWithThirdParties"];
+            var array = ["Storage", "Deletion", "SharedWithOtherUsers", "SharedByDrivers", "SharedWithThirdParties", "HowToViewInfomationStoredOnYou"];
             var string = "Processing.Processing."
             var name = "Processing";
             change(network, array, string, name);
